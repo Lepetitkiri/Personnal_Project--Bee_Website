@@ -1,0 +1,20 @@
+{
+  "short_name": "Apiculteur à Rivière (62)",
+  "name": "Votre apiculteur local à Rivière (62)",
+  "icons": [
+    {
+      "src": "../Ressources/Icons/Favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#01C7BE",
+  "background_color": "#FFFEDC",
+  "scope": "/",
+  "orientation": "portrait",
+  "description": "Présentation de votre producteur de miel local à Riviere dans le Pas-de-Calais",
+  "lang": "fr-FR",
+  "dir": "ltr"
+}
