@@ -11,7 +11,7 @@ const HeaderStyle = styled.header`
   color: ${colors.white};
   background-image: linear-gradient( to bottom,
     rgb(72, 63, 63, 0.5),
-    rgba(00, 00, 00, 0.5)), url("../Pictures/Banniere.jpg"); 
+    rgba(00, 00, 00, 0.5)), url("./Pictures/Banniere.jpg"); 
   background-size: 100%;
   gap: 10%;
   border-radius: 20px;
