@@ -8,7 +8,7 @@ import Boutique from './Pages/Boutique'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Personnal_Project--Bee_Website">
       <Routes>
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />
