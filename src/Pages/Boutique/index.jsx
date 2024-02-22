@@ -7,18 +7,18 @@ import Footer from '../../Components/Footer/Index';
 
 // Provider
 
-function Contact() {
+function Boutique() {
 
     return (
         <>
             <Header />
             <main>
                 <WorkInProgress />
-                <p>Page Contact</p>
+                <p>Boutique</p>
             </main>
             <Footer />
         </>
     );
 }
 
-export default Contact;
+export default Boutique;

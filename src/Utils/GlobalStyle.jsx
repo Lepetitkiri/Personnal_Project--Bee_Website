@@ -5,11 +5,11 @@ const GlobalStyle = styled.div`
 
     main {
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      flex-wrap: no-wrap;
+      flex-direction: row;
       align-content: center;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       height: auto;
       width: 100%;
       margin: 0;
@@ -19,6 +19,11 @@ const GlobalStyle = styled.div`
       color: ${colors.black};
       background: ${colors.white};
       object-fit: cover;
+
+      nav {
+        position: sticky;
+        top: 0;
+      }
     }
 
   a {
