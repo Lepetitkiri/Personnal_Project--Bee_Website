@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Personnal_Project--Bee_Website/static/js/main.e4d16c37.js",
+    "main.js": "/Personnal_Project--Bee_Website/static/js/main.39dfef3c.js",
     "index.html": "/Personnal_Project--Bee_Website/index.html",
-    "main.e4d16c37.js.map": "/Personnal_Project--Bee_Website/static/js/main.e4d16c37.js.map"
+    "main.39dfef3c.js.map": "/Personnal_Project--Bee_Website/static/js/main.39dfef3c.js.map"
   },
   "entrypoints": [
-    "static/js/main.e4d16c37.js"
+    "static/js/main.39dfef3c.js"
   ]
 }
