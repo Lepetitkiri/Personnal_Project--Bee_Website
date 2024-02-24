@@ -20,6 +20,11 @@ article:hover {
   transition: opacity 300ms ease-in-out, border 300ms ease-in-out;
 }
 
+img {
+  width: 50%;
+  height: auto;
+}
+
   /* Version tablette */
   @media only screen and (max-width: 992px) {
     article {
@@ -29,6 +34,7 @@ article:hover {
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
+    
   }
 `;
 
