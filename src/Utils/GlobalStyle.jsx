@@ -17,33 +17,68 @@ const GlobalStyle = styled.div`
       list-style: none;
       font-family: Montserrat, 'Courier New', Courier, sans-serif;
       color: ${colors.black};
-      background: ${colors.white};
+      background: ${colors.tertiary};
       object-fit: cover;
 
-      nav {
-        position: sticky;
-        top: 0;
+      h2 {
+        font-size: x-large;
+      }
+
+      h3 {
+        font-size: large;
+      }
+
+      p, li {
+        font-size: medium;
+        line-height: 22px;
       }
     }
-
-  a {
-    text-decoration: none;
-    color: ${colors.white};
-  }
-
+    
   ::placeholder {
     color: ${colors.white};
   }
 
+   a {
+    color: ${colors.white};
+    text-decoration: none;
+   }
+
   /* Version tablette */
     @media only screen and (max-width : 992px) {
-      max-width: 992px;
+
+      main h2 {
+        font-size: large;
+      }
+
+      main h3 {
+        font-size: medium;
+      }
+
+      main p, main li {
+        font-size: small;
+      }
+
     }
 
     /* Version mobile */
     @media only screen and (max-width : 767px) {
       max-width: 767px;
+
+      main h2 {
+        font-size: medium;
+      }
+
+      main h3 {
+        font-size: small;
+      }
+
+      main p, main li {
+        font-size: x-small;
+        line-height: 20px;
+      }
+
     }
+  }
 
 `;
 

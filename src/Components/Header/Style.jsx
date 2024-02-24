@@ -14,14 +14,15 @@ const HeaderStyle = styled.header`
     rgb(72, 63, 63, 0.5),
     rgba(00, 00, 00, 0.5)), url('${props => props.basename}/Pictures/Banniere.jpg'); 
   background-size: 100%;
-  gap: 10%;
   border-radius: 20px;
+  gap: 5%;
 
   h1 {
     width: 70%;
     text-align: center;
     font-size: xx-large;
-    color: ${colors.tertiary}
+    color: ${colors.tertiary};
+    font-family: Montserrat, 'Courier New', Courier, sans-serif;
   }
 
   img {
@@ -39,16 +40,16 @@ const HeaderStyle = styled.header`
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    width: 20%;
-    font-size: normal;
+    width: 10%;
+    font-size: medium;
   }
   nav :hover {
     color: ${colors.primary};
-    font-weight: bold;
+    transition: color 200ms;
   }
 
   /* Taille intermédiaire */
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1280px) {
     h1 {
       font-size: x-large;
     }

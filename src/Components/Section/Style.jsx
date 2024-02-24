@@ -4,10 +4,10 @@ const SectionStyle = styled.section`
 
 display: flex;
 flex-direction: column;
+align-items: center;
 height: auto;
 width: 100%;
-border: 1px blue solid;
-height: auto;
+margin: 1%;
 
   /* Version tablette */
   @media only screen and (max-width: 992px) {

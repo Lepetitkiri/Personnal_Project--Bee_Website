@@ -9,9 +9,11 @@ align-items: center;
 width: 20%;
 height: auto;
 background-color: ${colors.quaternary};
-border: 5px ${colors.primary} solid;
 border-radius: 20px;
+position: sticky;
+top: 2%;
 padding: 2%;
+margin: 1%;
 
 p {
   width: 100%;
