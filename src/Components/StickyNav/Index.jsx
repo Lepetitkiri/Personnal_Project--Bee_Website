@@ -4,7 +4,7 @@ import StickyNavStyle from "./Style.jsx";
 function StickyNav() {
   return (
     <StickyNavStyle>
-      <h3> Me contacter </h3>
+      <h2> Me contacter </h2>
       <p> Pour toutes commandes veuillez me contacter
         <br /> par téléphone au
         <br /><br /> 06 00 00 00 00

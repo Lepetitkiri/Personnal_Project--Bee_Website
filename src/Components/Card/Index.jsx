@@ -10,14 +10,14 @@ function Card() {
     <CardStyle>
       {HomeDatas.map((titre, index) => (
         <article key={`HomeDatas-${index}`}>
-          <h3> {HomeDatas[index].titre} </h3>
-          <h4> {HomeDatas[index]["sous-titre"]} </h4>
+          <h2> {HomeDatas[index].titre} </h2>
+          <h3> {HomeDatas[index]["sous-titre"]} </h3>
           <p> {HomeDatas[index].texte} </p>
-          < /article>
+        </article>
 
       ))}
-        </CardStyle>
-      );
+    </CardStyle>
+  );
 }
 
-      export default Card;
+export default Card;
