@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter basename="/Personnal_Project--Bee_Website/">
       <Routes>
         <Route path="*" element={<Error basename={basename} />} />
-        <Route path="/" element={<Home basename={basename} />} />
+        <Route path="" element={<Home basename={basename} />} />
         <Route path="Boutique" element={<Boutique basename={basename} />} />
       </Routes>
     </BrowserRouter>
