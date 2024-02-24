@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Components
 import Header from '../../Components/Header/Index';
@@ -7,18 +8,22 @@ import Footer from '../../Components/Footer/Index';
 
 // Provider
 
-function Boutique() {
+function Boutique({ basename }) {
 
     return (
         <>
-            <Header />
+            <Header basename={basename} />
             <main>
-                <WorkInProgress />
+                <WorkInProgress basename={basename} />
                 <p>Boutique</p>
             </main>
             <Footer />
         </>
     );
 }
+
+Boutique.propTypes = {
+    basename: PropTypes.string
+};
 
 export default Boutique;

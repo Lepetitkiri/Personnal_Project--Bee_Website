@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Components
 import Header from '../../Components/Header/Index';
@@ -7,18 +8,22 @@ import Footer from '../../Components/Footer/Index';
 
 // Provider
 
-function Error() {
+function Error({ basename }) {
 
     return (
         <>
-            <Header />
+            <Header basename={basename} />
             <main>
-                <WorkInProgress />
+                <WorkInProgress basename={basename} />
                 <p>Page Error</p>
             </main>
             <Footer />
         </>
     );
 }
+
+Error.propTypes = {
+    basename: PropTypes.string
+};
 
 export default Error;

@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom';
 import HeaderStyle from "./Style.jsx";
 
-function Header() {
+function Header({ basename }) {
   return (
-    <HeaderStyle>
-      <img alt="Abeille" src="Pictures/Bee_Logo.png" />
+    <HeaderStyle basename={basename} >
+      <img alt="Abeille" src={`${basename}/Pictures/Bee_Logo.png`} />
       <h1>Votre apiculteur local à Rivière dans le Pas-de-calais</h1>
       <nav>
         <Link to="/"> Accueil </Link>
@@ -14,5 +15,9 @@ function Header() {
     </HeaderStyle>
   );
 }
+
+Header.propTypes = {
+  basename: PropTypes.string
+};
 
 export default Header;

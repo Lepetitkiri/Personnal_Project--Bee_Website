@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Components
 import Header from '../../Components/Header/Index';
@@ -8,11 +9,11 @@ import Footer from '../../Components/Footer/Index';
 
 // Provider
 
-function Home() {
+function Home({ basename }) {
 
     return (
         <>
-            <Header />
+            <Header basename={basename} />
             <main>
                 <StickyNav />
                 <Section />
@@ -21,5 +22,9 @@ function Home() {
         </>
     );
 }
+
+Home.propTypes = {
+    basename: PropTypes.string
+};
 
 export default Home;
