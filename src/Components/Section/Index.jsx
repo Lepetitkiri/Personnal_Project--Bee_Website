@@ -4,10 +4,10 @@ import SectionStyle from "./Style.jsx";
 // Compoments
 import Card from '../../Components/Card/Index';
 
-function Section() {
+function Section({ basename }) {
   return (
     <SectionStyle>
-      <Card />
+      <Card basename={basename} />
     </SectionStyle>
   );
 }
