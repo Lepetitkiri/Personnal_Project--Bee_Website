@@ -31,7 +31,7 @@ function Card({ basename }) {
           {/*Code de vérification de la présente de la donnée "illustration" */}
           {HomeDatas[index].illustration === "" ? (
             <div></div>
-          ) : (<img src={`${basename}/Pictures/${HomeDatas[index].illustration}`} ></img>)
+          ) : (<img src={`${basename}/Pictures/${HomeDatas[index].illustration}`} alt={`${HomeDatas[index].alt}`} ></img>)
           }
         </article>
 
