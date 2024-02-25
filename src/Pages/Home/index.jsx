@@ -15,7 +15,7 @@ function Home({ basename }) {
         <>
             <Header basename={basename} />
             <main>
-                <StickyNav />
+                <StickyNav basename={basename} />
                 <Section basename={basename} />
             </main>
             <Footer />

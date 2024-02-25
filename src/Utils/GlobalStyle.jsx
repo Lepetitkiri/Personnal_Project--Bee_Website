@@ -64,6 +64,11 @@ const GlobalStyle = styled.div`
     @media only screen and (max-width : 767px) {
       max-width: 767px;
 
+      main {
+        display: flex;
+        flex-direction: column;
+      }
+
       main h2 {
         font-size: medium;
       }
