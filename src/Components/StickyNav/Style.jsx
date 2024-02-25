@@ -8,7 +8,7 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 width: 20%;
-height: auto;
+height: 100%;
 background-color: ${colors.quaternary};
 border-radius: 20px;
 position: sticky;

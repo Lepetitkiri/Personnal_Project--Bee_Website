@@ -3,11 +3,15 @@ import styled from 'styled-components';
 const SectionStyle = styled.section`
 
 display: flex;
-flex-direction: column;
 align-items: center;
 height: auto;
-width: 100%;
+width: auto;
 margin: 1%;
+
+& .Section--Row {
+  display: flex;
+flex-direction: row;
+}
 
   /* Version tablette */
   @media only screen and (max-width: 992px) {
@@ -15,6 +19,11 @@ margin: 1%;
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
+    flex-direction: column;
+
+    & .Section--Row {
+    flex-direction: column;
+    }
   }
 `;
 

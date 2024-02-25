@@ -3,8 +3,10 @@ import PropTypes from "prop-types";
 
 // Components
 import Header from '../../Components/Header/Index';
-import WorkInProgress from '../../Components/WorkInProgress/Index';
+import Section from "../../Components/Section/Index";
 import Footer from '../../Components/Footer/Index';
+
+const pageTitle = "Boutique";
 
 // Provider
 
@@ -14,8 +16,7 @@ function Boutique({ basename }) {
         <>
             <Header basename={basename} />
             <main>
-                <WorkInProgress basename={basename} />
-                <p>Boutique</p>
+                <Section basename={basename} pageTitle={pageTitle} />
             </main>
             <Footer />
         </>

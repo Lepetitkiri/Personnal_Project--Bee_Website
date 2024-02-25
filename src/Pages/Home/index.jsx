@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 
 // Components
 import Header from '../../Components/Header/Index';
-import StickyNav from '../../Components/StickyNav/Index';
 import Section from '../../Components/Section/Index';
 import Footer from '../../Components/Footer/Index';
+
+const pageTitle = "Home";
 
 // Provider
 
@@ -15,8 +16,7 @@ function Home({ basename }) {
         <>
             <Header basename={basename} />
             <main>
-                <StickyNav basename={basename} />
-                <Section basename={basename} />
+                <Section basename={basename} pageTitle={pageTitle} />
             </main>
             <Footer />
         </>
