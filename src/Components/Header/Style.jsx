@@ -6,7 +6,7 @@ const HeaderStyle = styled.header`
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 150px;
   width: 100%;
   color: ${colors.white};
@@ -15,7 +15,6 @@ const HeaderStyle = styled.header`
     rgba(00, 00, 00, 0.5)), url('${props => props.basename}/Pictures/Banniere.jpg'); 
   background-size: 100%;
   border-radius: 20px;
-  gap: 5%;
 
   h1 {
     width: 70%;
@@ -68,9 +67,11 @@ const HeaderStyle = styled.header`
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
-    height: 100px;
+    height: 80px;
+    gap: 2%;
     h1 {
       font-size: small;
+      width: 60%;
     }
     img {
       height: 50px;
