@@ -3,14 +3,20 @@ import styled from 'styled-components';
 const SectionStyle = styled.section`
 
 display: flex;
+flex-direction: column;
 align-items: center;
 height: auto;
 width: auto;
 margin: 1%;
 
-& .Section--Row {
+& div.Section--Row {
   display: flex;
 flex-direction: row;
+}
+
+& div.Section--Column {
+  display: flex;
+flex-direction: column;
 }
 
   /* Version tablette */
@@ -20,8 +26,9 @@ flex-direction: row;
   /* Version mobile */
   @media only screen and (max-width: 767px) {
     flex-direction: column;
+    width: 100%;
 
-    & .Section--Row {
+    & div.Section--Row {
     flex-direction: column;
     }
   }
