@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from 'react-router-dom';
 import PropTypes from "prop-types";
 import SectionStyle from "./Style.jsx";
 
@@ -27,9 +28,7 @@ function Section({ basename, pageTitle }) {
       );
       break;
     default:
-      content = (
-        <p> Error </p>
-      );
+      return <Navigate to="/Error" />
   }
 
   return (

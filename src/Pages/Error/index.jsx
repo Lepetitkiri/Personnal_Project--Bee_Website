@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 // Components
 import Header from '../../Components/Header/Index';
-import WorkInProgress from '../../Components/WorkInProgress/Index';
+import ErrorComponent from "../../Components/ErrorComponent/Index";
 import Footer from '../../Components/Footer/Index';
 
 // Provider
@@ -14,8 +14,7 @@ function Error({ basename }) {
         <>
             <Header basename={basename} />
             <main>
-                <WorkInProgress basename={basename} />
-                <p>Page Error</p>
+                <ErrorComponent basename={basename} />
             </main>
             <Footer />
         </>

@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import PropTypes from "prop-types";
 import CardStyle from "./Style.jsx";
 
 // Données
 import HomeDatas from '../../Ressources/HomeDatas.json';
 
-// Componenets
+// Componnents
 import WorkInProgress from "../WorkInProgress/Index.jsx";
 function Card({ basename, pageTitle }) {
 
@@ -59,15 +59,7 @@ function Card({ basename, pageTitle }) {
       );
       break;
     default:
-      content = (
-        <>
-          <article className="Card--Column Card--Error">
-            <p>Oups un erreur</p>
-            <Link to="/"> Cliquez ici pour retourner à l'accueil </Link>
-            <WorkInProgress basename={basename} />
-          </article>
-        </>
-      );
+      return <Navigate to="/Error" />
   }
 
   return (
