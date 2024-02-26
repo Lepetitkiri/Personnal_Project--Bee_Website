@@ -7,7 +7,6 @@ flex-direction: column;
 align-items: center;
 height: auto;
 width: auto;
-margin: 1%;
 
 & div.Section--Row {
   display: flex;

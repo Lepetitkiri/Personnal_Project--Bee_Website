@@ -16,8 +16,8 @@ article {
 
   img {
     border-radius: 20px;
-    width: 30%;
     object-fit: cover;
+    width: 30%;
   }
 
   &.Card--Row {
@@ -56,9 +56,10 @@ article {
     article {
       &.Card--Home {
         opacity: 1;
+        align-items: center;
       }
       img {
-        width: 40%;
+          max-height: 200px;
       }
     }
   }
@@ -66,18 +67,14 @@ article {
   /* Version mobile */
   @media only screen and (max-width: 767px) {
     article {
-      flex-direction: column;
-      align-items: center;
-      opacity: 1;
-      &:nth-child(odd) {
+      &.Card--Home {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        &:nth-child(odd) {
+          flex-direction: column;
+          }
       }
-    }
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 200px;
-      object-fit: contain;
     }
   }
 `;
