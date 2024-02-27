@@ -11,7 +11,7 @@ const ErrorComponentStyle = styled.div`
   padding: 2%;
   gap: 5%;
 
-    a, p {
+  .Error--Link, a, p {
       font-size: large;
       color: ${colors.black};
       text-align: center;

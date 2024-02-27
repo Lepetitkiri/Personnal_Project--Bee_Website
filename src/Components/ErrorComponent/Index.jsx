@@ -11,7 +11,7 @@ function ErrorComponent({ basename }) {
   return (
     <ErrorComponentStyle>
       <p>Oups un erreur</p>
-      <Link to="/"> Cliquez ici pour retourner à l'accueil </Link>
+      <Link className="Error--Link" to="/"> Cliquez ici pour retourner à l'accueil </Link>
       <WorkInProgress basename={basename} />
     </ErrorComponentStyle>
   );
