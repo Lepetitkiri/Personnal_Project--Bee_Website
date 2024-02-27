@@ -20,6 +20,11 @@ article {
     width: 30%;
   }
 
+  a {
+    color: ${colors.black};
+    text-decoration: underline;
+  }
+
   &.Card--Row {
     flex-direction: row;
   }
@@ -39,6 +44,19 @@ article {
       flex-direction: row-reverse;
       }
   }
+  &.Card--Boutique {
+    text-align: center;
+    p, a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+  & .Card--Boutique_img {
+    width: 20px;
+    border-radius: 0px;
+  }
+
   &.Card--Error {
     a, p {
       font-size: x-large;

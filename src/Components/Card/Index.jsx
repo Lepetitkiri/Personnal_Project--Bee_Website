@@ -7,7 +7,6 @@ import CardStyle from "./Style.jsx";
 import HomeDatas from '../../Ressources/HomeDatas.json';
 
 // Componnents
-import WorkInProgress from "../WorkInProgress/Index.jsx";
 function Card({ basename, pageTitle }) {
 
   let content;
@@ -48,12 +47,18 @@ function Card({ basename, pageTitle }) {
           <article className="Card--Column Card--Boutique">
             <h2>Les produits de la ruche</h2>
             <p>Bienvenue sur la page boutique de notre ruche en ligne. Découvrez un sélection de produits de qualité, soigneusement récoltés et préparés par mes soins.</p>
-            <p>Pour passer commande, rien de plus simple : Appelez-moi au 06 00 00 00 00</p>
+            <p>Pour passer commande, rien de plus simple : </p>
+            <p><img className="Card--Boutique_img" alt="Mail" src={`${basename}/Pictures/Phone.png`} />
+              Appelez-moi au 06 00 00 00 00</p>
             <p>ou envoyez-moi un email contenant votre commande à
-              <a href="mailto:mielderiviere@gmail.com">mielderiviere@gmail.com</a></p>
+              <a href="mailto:mielderiviere@gmail.com"> mielderiviere@gmail.com
+                <img className="Card--Boutique_img" alt="Mail" src={`${basename}/Pictures/Mailto.png`} />
+              </a>
+            </p>
             <p>Bien évidemment je suis disponible pour toute demande d'informations complémentaires.</p>
             <p>Merci de soutenir ma petite entreprise et de contribuer à la préservation des abeilles, de la nature et des traditions apicoles.</p>
-            <WorkInProgress basename={basename} />
+          </article >
+          <article className="Card--Column Card--Boutique">
           </article>
         </>
       );
