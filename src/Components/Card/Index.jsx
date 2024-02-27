@@ -7,6 +7,7 @@ import CardStyle from "./Style.jsx";
 import HomeDatas from '../../Ressources/HomeDatas.json';
 
 // Componnents
+import ShopPart from '../ShopPart/Index.jsx';
 function Card({ basename, pageTitle }) {
 
   let content;
@@ -59,6 +60,7 @@ function Card({ basename, pageTitle }) {
             <p>Merci de soutenir ma petite entreprise et de contribuer à la préservation des abeilles, de la nature et des traditions apicoles.</p>
           </article >
           <article className="Card--Column Card--Boutique">
+            <ShopPart />
           </article>
         </>
       );
