@@ -93,6 +93,9 @@ article {
           flex-direction: column;
           }
       }
+      &.Card--Boutique p {
+        flex-direction: column;
+      }
     }
   }
 `;

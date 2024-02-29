@@ -15,21 +15,24 @@ border: 2px solid ${colors.quinary};
 padding: 2%;
 
 & .Card--Arrow {
-  width: 5%;
   border-radius: 0;
+  border: none;
+  background-color: ${colors.primary};
   object-fit: contain;
+  width: 15%;
 }
 
 div {
   width: 80%;
+  min-height: 500px;
   background-color: ${colors.tertiary};
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   img {
-      min-height: 100px;
-      max-height: 200px;
+      min-height: 250px;
+      max-height: 300px;
       width: 100%;
       margin-bottom: 5%;
       object-fit: contain;
@@ -46,6 +49,14 @@ div {
   /* Version mobile */
   @media only screen and (max-width: 767px) {
     width: 90%;
+    div {
+      min-height: 400px;
+    }
+    div img {
+      width: 90%;
+      min-height: 150px;
+      max-height: 200px;
+    }
   }
 `;
 
