@@ -1,0 +1,29 @@
+[
+    {
+        "titre": "Miel toutes fleurs 2022",
+        "illustration": "Shop-Miel_Toutes_fleurs_2023.jpg",
+        "alt": "Pot de miel",
+        "description": "Très doux, et très crémeux, ce miel est très apprécié pour son goût singulier et sa texture.",
+        "poids": "500g",
+        "infos": "Produit à Rivières en 2022",
+        "prix": "7.00€"
+    },
+    {
+        "titre": "Miel toutes fleurs 2023",
+        "illustration": "Shop-Miel_Toutes_fleurs_2023.jpg",
+        "alt": "Pot de miel",
+        "description": "Très doux, et très crémeux, ce miel est très apprécié pour son goût singulier et sa texture.",
+        "poids": "1kg",
+        "infos": "Produit à Rivières en 2023",
+        "prix": "12.00€"
+    },
+    {
+        "titre": "Coffret de 4pots",
+        "illustration": "Shop-Coffret.jpg",
+        "alt": "Coffret de 4 Pots de miel",
+        "description": "Ce coffret est composé de 4 pots de 125g de miel.",
+        "poids": "500g",
+        "infos": "Produit à Rivières",
+        "prix": "15.00€"
+    }
+]

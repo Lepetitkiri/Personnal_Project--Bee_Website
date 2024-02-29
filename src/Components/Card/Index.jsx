@@ -60,7 +60,7 @@ function Card({ basename, pageTitle }) {
             <p>Merci de soutenir ma petite entreprise et de contribuer à la préservation des abeilles, de la nature et des traditions apicoles.</p>
           </article >
           <article className="Card--Column Card--Boutique">
-            <ShopPart />
+            <ShopPart basename={basename} />
           </article>
         </>
       );
