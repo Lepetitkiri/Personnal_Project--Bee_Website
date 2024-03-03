@@ -7,6 +7,7 @@ import CardStyle from "./Style.jsx";
 import HomeDatas from '../../Ressources/HomeDatas.json';
 
 // Componnents
+import WeatherWidget from '../WeatherWidget/Index.jsx';
 import ShopPart from '../ShopPart/Index.jsx';
 function Card({ basename, pageTitle }) {
 
@@ -16,6 +17,10 @@ function Card({ basename, pageTitle }) {
     case 'Home':
       content = (
         <>
+          <article className="Card--Column Card--Home">
+            <WeatherWidget />
+          </article>
+
           {HomeDatas.map((data, index) => (
             <article key={`HomeDatas-${index}`} className="Card--Row Card--Home" >
               <div>

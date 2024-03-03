@@ -33,7 +33,7 @@ div {
   img {
       min-height: 250px;
       max-height: 300px;
-      width: 100%;
+      width: auto;
       margin-bottom: 5%;
       object-fit: contain;
       border-radius: 0;

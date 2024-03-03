@@ -40,7 +40,7 @@ article {
       border-bottom: 1px solid ${colors.secondary};
       transition: opacity 300ms ease-in-out, border 300ms ease-in-out;
     }
-    &:nth-child(odd) {
+    &:nth-child(even) {
       flex-direction: row-reverse;
       }
   }
