@@ -20,7 +20,7 @@ function ShopPart({ basename, ProductNumber }) {
 
   return (
     <ShopPartStyle basename={basename} >
-      <button onClick={prevSlide} className="Card--Arrow"><img src={`${basename}/Pictures/Arrow-left.png`} alt="Flèche vers la gauche" /> </button>
+      <button onClick={prevSlide} className="Card--Arrow"><img src={`${basename}/Pictures/Arrow-Left.png`} alt="Flèche vers la gauche" /> </button>
       <div>
         <h2><strong>{ShopDatas[currentIndex].titre}</strong></h2>
         <img src={`${basename}/Pictures/${ShopDatas[currentIndex].illustration}`} alt={ShopDatas[currentIndex].alt} />
@@ -29,7 +29,7 @@ function ShopPart({ basename, ProductNumber }) {
         <p>Poids : {ShopDatas[currentIndex].poids}</p>
         <p>Prix unitaire : {ShopDatas[currentIndex].prix}</p>
       </div>
-      <button onClick={nextSlide} className="Card--Arrow"><img src={`${basename}/Pictures/Arrow-right.png`} alt="Flèche vers la droite" /> </button>
+      <button onClick={nextSlide} className="Card--Arrow"><img src={`${basename}/Pictures/Arrow-Right.png`} alt="Flèche vers la droite" /> </button>
     </ShopPartStyle>
   );
 }
