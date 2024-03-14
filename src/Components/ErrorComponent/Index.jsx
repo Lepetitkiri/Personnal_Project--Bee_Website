@@ -9,7 +9,7 @@ import WorkInProgress from "../WorkInProgress/Index.jsx";
 function ErrorComponent({ basename }) {
 
   return (
-    <ErrorComponentStyle>
+    <ErrorComponentStyle basename={basename}>
       <p>Oups un erreur</p>
       <Link className="Error--Link" to="/"> Cliquez ici pour retourner à l'accueil </Link>
       <WorkInProgress basename={basename} />

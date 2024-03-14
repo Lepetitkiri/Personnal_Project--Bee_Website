@@ -1,5 +1,6 @@
 import colors from '../../Utils/Colors';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ErrorComponentStyle = styled.div`
 
@@ -10,6 +11,7 @@ const ErrorComponentStyle = styled.div`
   width: 100%;
   padding: 2%;
   gap: 5%;
+  cursor: url('${props => props.basename}/Pictures/bee.png'), auto;
 
   .Error--Link, a, p {
       font-size: large;
@@ -41,5 +43,9 @@ const ErrorComponentStyle = styled.div`
     }
   }
 `;
+
+ErrorComponentStyle.propTypes = {
+  basename: PropTypes.string,
+};
 
 export default ErrorComponentStyle;
