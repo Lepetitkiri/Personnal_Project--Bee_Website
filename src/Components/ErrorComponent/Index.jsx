@@ -6,7 +6,7 @@ import ErrorComponentStyle from "./Style.jsx";
 import ShopPartStyle from '../ShopPart/Style.jsx';
 
 function ErrorComponent({ basename }) {
-  const [isChecked, setIsChecked] = useState(Array(9).fill(false)); // Tableau d'états pour les boutons
+  const [isChecked, setIsChecked] = useState(Array(8).fill(false)); // Tableau d'états pour les boutons
 
   const handleButtonClick = (index) => {
     const updatedChecked = [...isChecked];
@@ -14,21 +14,31 @@ function ErrorComponent({ basename }) {
     setIsChecked(updatedChecked);
   };
 
+  const allFalse = isChecked.every(value => value);
+
   return (
     <ErrorComponentStyle basename={basename}>
-      <p>Oups un erreur</p>
+      <p>Oups, une erreur</p>
       <Link className="Error--Link" to="/"> Cliquez ici pour retourner à l'accueil </Link>
       <ShopPartStyle className="Error--Instructions">
-        <p> Maintenant c'est à vous de travailler. Cliquez sur toutes les fleurs pour les butiner🌱 </p>
+        {allFalse ? <p> Victoire 🎉 Et si vous passiez commande maintenant ? </p> :
+          <p> Maintenant c'est à vous de travailler. Cliquez sur toutes les fleurs pour les butiner🌱 </p>
+        }
       </ShopPartStyle>
-      <div className="Error--Game">
-        {isChecked.map((checked, index) => (
-          <button key={index} onClick={() => handleButtonClick(index)}>
-            {checked ? <img alt="Fleur blanche" src={`${basename}/Pictures/flower-empty.png`} /> : <img alt="Fleur rose" src={`${basename}/Pictures/flower-full.png`} />}
-          </button>
-        ))}
+
+      <div className={allFalse ? "Error--Game__Victory" : "Error--Game"}>
+        {
+          allFalse ?
+            <img alt="Femme dans un champ de tournesol" src={`${basename}/Pictures/Error-Page_Victory.jpg`} /> :
+            isChecked.map((checked, index) => (
+              <button key={index} onClick={() => handleButtonClick(index)}>
+                <img alt={checked ? "Fleur blanche" : "Fleur rose"} src={`${basename}/Pictures/${checked ? 'flower-empty.png' : 'flower-full.png'}`} />
+              </button>
+            ))
+        }
       </div>
-    </ErrorComponentStyle>
+
+    </ErrorComponentStyle >
   );
 }
 

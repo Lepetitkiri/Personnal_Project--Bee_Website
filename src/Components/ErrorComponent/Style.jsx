@@ -1,9 +1,26 @@
 import colors from '../../Utils/Colors';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const ErrorComponentStyle = styled.div`
+const moveUpDown = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-150px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(150px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 
+const ErrorComponentStyle = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,13 +36,11 @@ const ErrorComponentStyle = styled.div`
       color: ${colors.black};
       text-align: center;
     }
+
     .Error--Instructions {
-      margin: 50px 0 50px 0;
+      margin: 50px 0;
     }
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
+
     button {
       width: 8%;
       border: none;
@@ -36,30 +51,53 @@ const ErrorComponentStyle = styled.div`
       color: inherit;
       cursor: url('${props => props.basename}/Pictures/bee.png'), auto;
     }
+
     .Error--Game {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      width: 60%;
-      height: auto;
-      & button:nth-child(1), button:nth-child(5), button:nth-child(9) {
-        align-self: start;
+      height: 400px;
+      width: 80%;
+      & button {
+        width: 10%;
+        height: 80px;
+        animation: ${moveUpDown} 8s linear infinite;
       }
-      & button:nth-child(3), button:nth-child(7) {
-        align-self: end;
+      & img {
+        height: 50px;
+        width: 100%;
+        object-fit: contain;
+      }
+      & :nth-child(2n) {
+        animation: ${moveUpDown} 6s linear infinite;
+      }
+      & :nth-child(3n) {
+        animation: ${moveUpDown} 8s linear 1s infinite;
+      }
+    }
+
+    .Error--Game__Victory {
+      width: 80%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 100%;
+        border-radius: 20px;
       }
     }
 
 
   /* Version tablette */
   @media only screen and (max-width: 992px) {
-      button {
-        width: 12%;
-      }
   }
 
   /* Version mobile */
   @media only screen and (max-width: 767px) {
+    .Error--Game__Victory img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 `;
 
