@@ -57,6 +57,9 @@ div {
       min-height: 150px;
       max-height: 200px;
     }
+    .Card--Picture {
+      width: 90%;
+    }
   }
 `;
 

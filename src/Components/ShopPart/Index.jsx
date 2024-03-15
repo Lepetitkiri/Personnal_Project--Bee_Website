@@ -23,7 +23,7 @@ function ShopPart({ basename, ProductNumber }) {
       <button onClick={prevSlide} className="Card--Arrow"><img src={`${basename}/Pictures/Arrow-Left.png`} alt="Flèche vers la gauche" /> </button>
       <div>
         <h2><strong>{ShopDatas[currentIndex].titre}</strong></h2>
-        <img src={`${basename}/Pictures/${ShopDatas[currentIndex].illustration}`} alt={ShopDatas[currentIndex].alt} />
+        <img classname="Card--Picture" src={`${basename}/Pictures/${ShopDatas[currentIndex].illustration}`} alt={ShopDatas[currentIndex].alt} />
         <p>{ShopDatas[currentIndex].description}</p>
         <p>{ShopDatas[currentIndex].infos}</p>
         <p>Poids : {ShopDatas[currentIndex].poids}</p>
