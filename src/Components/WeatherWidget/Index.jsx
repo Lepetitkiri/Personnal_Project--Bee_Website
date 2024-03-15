@@ -22,7 +22,7 @@ function WeatherWidget() {
     };
 
     fetchWeatherData();
-  }, [lat, lon]);
+  }, [lat, lon, APIKey]);
 
   if (!weatherData) {
     return <></>;
