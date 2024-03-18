@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Error basename={basename} />} />
         <Route path="" element={<Home basename={basename} />} />
-        <Route path="/Error" element={<Error basename={basename} />} />
+        <Route path="Error" element={<Error basename={basename} />} />
         <Route path="Boutique" element={<Boutique basename={basename} />} />
       </Routes>
     </BrowserRouter>
