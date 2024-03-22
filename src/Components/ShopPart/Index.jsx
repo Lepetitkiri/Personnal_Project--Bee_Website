@@ -1,12 +1,13 @@
-import { React, useState } from "react";
-import PropTypes from "prop-types";
+import { React, useState, useContext } from "react";
 import ShopPartStyle from "./Style.jsx";
+
+import { MyContextForBasenameValue } from '../../index.js';
 
 // Données
 import ShopDatas from '../../Ressources/ShopDatas.json';
+function ShopPart({ ProductNumber }) {
 
-// Componnents
-function ShopPart({ basename, ProductNumber }) {
+  const basename = useContext(MyContextForBasenameValue);
 
   // Création du carrousel à partir du state : 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,9 +34,5 @@ function ShopPart({ basename, ProductNumber }) {
     </ShopPartStyle>
   );
 }
-
-ShopPart.propTypes = {
-  basename: PropTypes.string
-};
 
 export default ShopPart;

@@ -1,9 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 import HeaderStyle from "./Style.jsx";
 
-function Header({ basename }) {
+import { MyContextForBasenameValue } from '../../index.js';
+function Header() {
+
+  const basename = useContext(MyContextForBasenameValue);
+
   return (
     <HeaderStyle basename={basename} >
       <img alt="Abeille" src={`${basename}/Pictures/Bee_Logo.png`} />
@@ -15,9 +18,5 @@ function Header({ basename }) {
     </HeaderStyle>
   );
 }
-
-Header.propTypes = {
-  basename: PropTypes.string
-};
 
 export default Header;

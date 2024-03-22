@@ -1,8 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
 import StickyNavStyle from "./Style.jsx";
 
-function StickyNav({ basename }) {
+import { MyContextForBasenameValue } from '../../index.js';
+
+function StickyNav() {
+
+  const basename = useContext(MyContextForBasenameValue);
+
   return (
     <StickyNavStyle>
       <h2> Me contacter </h2>
@@ -17,9 +21,5 @@ function StickyNav({ basename }) {
     </StickyNavStyle >
   );
 }
-
-StickyNav.propTypes = {
-  basename: PropTypes.string
-};
 
 export default StickyNav;

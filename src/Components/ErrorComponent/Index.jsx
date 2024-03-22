@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom';
-import PropTypes from "prop-types";
 import ErrorComponentStyle from "./Style.jsx";
+
+import { MyContextForBasenameValue } from '../../index.js';
 
 import ShopPartStyle from '../ShopPart/Style.jsx';
 
-function ErrorComponent({ basename }) {
+function ErrorComponent() {
+
+  const basename = useContext(MyContextForBasenameValue);
+
   const [isChecked, setIsChecked] = useState(Array(8).fill(false)); // Tableau d'états pour les boutons
 
   const handleButtonClick = (index) => {
@@ -41,9 +45,5 @@ function ErrorComponent({ basename }) {
     </ErrorComponentStyle >
   );
 }
-
-ErrorComponent.propTypes = {
-  basename: PropTypes.string
-};
 
 export default ErrorComponent;

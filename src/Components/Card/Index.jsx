@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navigate } from 'react-router-dom';
 import PropTypes from "prop-types";
 import CardStyle from "./Style.jsx";
@@ -9,7 +9,12 @@ import HomeDatas from '../../Ressources/HomeDatas.json';
 // Componnents
 import WeatherWidget from '../WeatherWidget/Index.jsx';
 import ShopPart from '../ShopPart/Index.jsx';
-function Card({ basename, pageTitle }) {
+
+// Context
+import { MyContextForBasenameValue } from '../../index.js';
+function Card({ pageTitle }) {
+
+  const basename = useContext(MyContextForBasenameValue);
 
   let content;
 
@@ -82,7 +87,6 @@ function Card({ basename, pageTitle }) {
 }
 
 Card.propTypes = {
-  basename: PropTypes.string,
   pageTitle: PropTypes.string
 };
 
