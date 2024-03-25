@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import { MyContextForBasenameValue } from './index';
 
 // Importation des routes 
-import Error from './Pages/Error'
-import Home from './Pages/Home'
-import Boutique from './Pages/Boutique'
+import Error from './Pages/Error';
+import Home from './Pages/Home';
+import Boutique from './Pages/Boutique';
 
 function App() {
 
@@ -14,14 +14,14 @@ function App() {
   const basename = useContext(MyContextForBasenameValue);
 
   return (
-    <BrowserRouter basename={basename}>
-      <Routes>
-        <Route path="*" element={<Error />} />
-        <Route path="" element={<Home />} />
-        <Route path="Error" element={<Error />} />
-        <Route path="Boutique" element={<Boutique />} />
+    <HashRouter >
+      <Routes basename={basename}>
+        <Route path={`${basename}/`} element={<Home />} />
+        <Route path={`${basename}/Error`} element={<Error />} />
+        <Route path={`${basename}/Boutique`} element={<Boutique />} />
+        <Route path={`*`} element={<Error />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
