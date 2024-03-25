@@ -16,5 +16,10 @@
   "orientation": "portrait",
   "description": "Présentation de votre producteur de miel local à Riviere dans le Pas-de-Calais",
   "lang": "fr-FR",
-  "dir": "ltr"
+  "dir": "ltr",
+  "categories": [
+    "food",
+    "shopping"
+  ],
+  "id": "bee_website"
 }
