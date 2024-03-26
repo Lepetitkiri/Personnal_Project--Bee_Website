@@ -12,8 +12,8 @@ function Header() {
       <img alt="Abeille" src={`${basename}/Pictures/Bee_Logo.png`} />
       <h1>Votre apiculteur local à Rivière dans le Pas-de-calais</h1>
       <nav>
-        <Link to="/"> Accueil </Link>
-        <Link to="/Boutique"> Boutique </Link>
+        <Link to={`${basename}/`}> Accueil </Link>
+        <Link to={`${basename}/Boutique`}> Boutique </Link>
       </nav>
     </HeaderStyle>
   );

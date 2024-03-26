@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 
 import { MyContextForBasenameValue } from './index';
 
@@ -9,20 +9,23 @@ import Home from './Pages/Home';
 import Boutique from './Pages/Boutique';
 
 function App() {
-
-  // Prop basename 
+  // Prop basename
   const basename = useContext(MyContextForBasenameValue);
 
-  return (
-    <HashRouter >
-      <Routes basename={basename}>
-        <Route path={`${basename}/`} element={<Home />} />
-        <Route path={`${basename}/Error`} element={<Error />} />
-        <Route path={`${basename}/Boutique`} element={<Boutique />} />
-        <Route path={`*`} element={<Error />} />
-      </Routes>
-    </HashRouter>
+  // Création des routes à partir des éléments
+  const routes = createRoutesFromElements(
+    <>
+      <Route path={`${basename}/`} element={<Home />} />
+      <Route path={`${basename}/Boutique`} element={<Boutique />} />
+      <Route path={`${basename}/Error`} element={<Error />} />
+      <Route path={`${basename}/*`} element={<Error />} />
+    </>
   );
+
+  // Création du BrowserRouter avec les routes
+  const router = createBrowserRouter(routes);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
