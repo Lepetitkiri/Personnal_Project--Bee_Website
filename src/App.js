@@ -1,31 +1,21 @@
-import React, { useContext } from 'react';
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import { MyContextForBasenameValue } from './index';
-
-// Importation des routes 
+// Importation des composants de page
 import Error from './Pages/Error';
 import Home from './Pages/Home';
 import Boutique from './Pages/Boutique';
 
 function App() {
-  // Prop basename
-  const basename = useContext(MyContextForBasenameValue);
-
-  // Création des routes à partir des éléments
-  const routes = createRoutesFromElements(
-    <>
-      <Route path={`${basename}/`} element={<Home />} />
-      <Route path={`${basename}/Boutique`} element={<Boutique />} />
-      <Route path={`${basename}/Error`} element={<Error />} />
-      <Route path={`${basename}/*`} element={<Error />} />
-    </>
+  return (
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="" element={<Home />} />
+      <Route exact path="/Boutique" element={<Boutique />} />
+      <Route exact path="/Error" element={<Error />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
-
-  // Création du BrowserRouter avec les routes
-  const router = createBrowserRouter(routes);
-
-  return <RouterProvider router={router} />;
 }
 
 export default App;

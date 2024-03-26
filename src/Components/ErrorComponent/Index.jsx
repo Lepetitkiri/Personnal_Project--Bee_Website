@@ -23,7 +23,7 @@ function ErrorComponent() {
   return (
     <ErrorComponentStyle basename={basename}>
       <p>Oups, une erreur</p>
-      <Link className="Error--Link" to={`${basename}/`}> Cliquez ici pour retourner à l'accueil </Link>
+      <Link className="Error--Link" to="/"> Cliquez ici pour retourner à l'accueil </Link>
       <ShopPartStyle className="Error--Instructions">
         {allFalse ? <p> Victoire 🎉 Et si vous passiez commande maintenant ? </p> :
           <p> Maintenant c'est à vous de travailler. Cliquez sur toutes les fleurs pour les butiner🌱 </p>
