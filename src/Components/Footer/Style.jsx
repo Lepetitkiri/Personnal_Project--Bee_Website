@@ -12,6 +12,11 @@ const FooterStyle = styled.footer`
   color: ${colors.white};
   border-radius: 20px;
 
+  a {
+    text-decoration: none;
+    color: ${colors.white};
+  }
+
   div {
     width: 70%;
     font-size: medium;

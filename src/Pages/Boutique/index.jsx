@@ -8,8 +8,6 @@ import Footer from '../../Components/Footer/Index';
 
 const pageTitle = "Boutique";
 
-// Provider
-
 function Boutique({ basename }) {
 
     return (

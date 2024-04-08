@@ -12,9 +12,11 @@ function ShopPart({ ProductNumber }) {
   // Création du carrousel à partir du state : 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Fonction pour passer au prochain slide dans le carrousel.
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === ShopDatas.length - 1 ? 0 : prevIndex + 1));
   };
+  // Fonction pour passer au slide précédent dans le carrousel.
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? ShopDatas.length - 1 : prevIndex - 1));
   };

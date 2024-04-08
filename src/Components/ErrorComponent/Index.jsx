@@ -10,14 +10,19 @@ function ErrorComponent() {
 
   const basename = useContext(MyContextForBasenameValue);
 
+  // Tableau d'états pour les boutons, initialisé avec 8 éléments tous à false.
   const [isChecked, setIsChecked] = useState(Array(8).fill(false)); // Tableau d'états pour les boutons
 
+  /** Fonction de gestion du clic des boutons
+  * @params {number} index - L'index du bouton sur lequel le clic est effectué
+  */
   const handleButtonClick = (index) => {
     const updatedChecked = [...isChecked];
     updatedChecked[index] = !updatedChecked[index];
     setIsChecked(updatedChecked);
   };
 
+  // Vérifier si tous les éléments du tableau isChecked sont à true.
   const allFalse = isChecked.every(value => value);
 
   return (

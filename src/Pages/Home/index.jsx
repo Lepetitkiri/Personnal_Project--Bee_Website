@@ -8,8 +8,6 @@ import Footer from '../../Components/Footer/Index';
 
 const pageTitle = "Home";
 
-// Provider
-
 function Home({ basename }) {
 
     return (

@@ -6,11 +6,15 @@ import WeatherWidgetStyle from "./Style";
 
 function WeatherWidget() {
 
+  // Clé API pour l'API OpenWeatherMap
   const APIKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
-  const [weatherData, setWeatherData] = useState(null);
+  // Coordonnées géographiques (latitude et longitude) pour la localisation de la météo.
   const lat = '50.23237';
   const lon = '2.68444';
 
+  const [weatherData, setWeatherData] = useState(null);
+
+  // Utilisation de useEffect pour récupérer les données météorologiques
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
@@ -24,6 +28,7 @@ function WeatherWidget() {
     fetchWeatherData();
   }, [lat, lon, APIKey]);
 
+  // Renvoie un composant vide si les données météorologiques ne sont pas disponibles.
   if (!weatherData) {
     return <></>;
   }

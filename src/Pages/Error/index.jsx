@@ -6,8 +6,6 @@ import Header from '../../Components/Header/Index';
 import ErrorComponent from "../../Components/ErrorComponent/Index";
 import Footer from '../../Components/Footer/Index';
 
-// Provider
-
 function Error({ basename }) {
 
     return (

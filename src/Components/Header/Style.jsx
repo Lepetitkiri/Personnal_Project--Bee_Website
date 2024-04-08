@@ -16,6 +16,11 @@ const HeaderStyle = styled.header`
   background-size: 100%;
   border-radius: 20px;
 
+  a {
+    text-decoration: none;
+    color: ${colors.white};
+  }
+
   h1 {
     width: 70%;
     text-align: center;
