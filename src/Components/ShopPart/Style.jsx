@@ -1,4 +1,5 @@
 import colors from '../../Utils/Colors';
+import border from '../../Utils/Border';
 import styled from 'styled-components';
 
 const ShopPartStyle = styled.div`
@@ -9,7 +10,7 @@ align-items: center;
 justify-content: space-around;
 width: 60%;
 height: auto;
-border-radius: 20px;
+${border};
 background-color: ${colors.primary};
 border: 2px solid ${colors.quinary};
 padding: 2%;
@@ -26,7 +27,7 @@ div {
   width: 80%;
   min-height: 500px;
   background-color: ${colors.tertiary};
-  border-radius: 20px;
+  ${border};
   display: flex;
   flex-direction: column;
   align-items: center;

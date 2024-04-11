@@ -1,4 +1,5 @@
 import colors from '../../Utils/Colors';
+import border from '../../Utils/Border';
 import styled, { keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -83,7 +84,7 @@ const ErrorComponentStyle = styled.div`
       justify-content: center;
       img {
         height: 100%;
-        border-radius: 20px;
+        ${border};
       }
     }
 

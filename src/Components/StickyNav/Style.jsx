@@ -1,4 +1,5 @@
 import colors from '../../Utils/Colors';
+import border from '../../Utils/Border';
 import styled from 'styled-components';
 
 const StickyNavStyle = styled.nav`
@@ -10,7 +11,7 @@ text-align: center;
 width: 20%;
 height: 100%;
 background-color: ${colors.quaternary};
-border-radius: 20px;
+${border};
 position: sticky;
 top: 2%;
 padding: 2%;

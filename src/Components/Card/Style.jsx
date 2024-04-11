@@ -1,4 +1,5 @@
 import colors from '../../Utils/Colors';
+import border from '../../Utils/Border';
 import styled from 'styled-components';
 
 const CardStyle = styled.div`
@@ -15,7 +16,7 @@ article {
   gap: 2%;
 
   img {
-    border-radius: 20px;
+    ${border};
     object-fit: cover;
     width: 30%;
   }

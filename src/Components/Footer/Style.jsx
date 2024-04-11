@@ -1,4 +1,5 @@
 import colors from '../../Utils/Colors';
+import border from '../../Utils/Border';
 import styled from 'styled-components';
 
 const FooterStyle = styled.footer`
@@ -10,7 +11,7 @@ const FooterStyle = styled.footer`
   width: 100%;
   background-color: ${colors.black};
   color: ${colors.white};
-  border-radius: 20px;
+  ${border};
 
   a {
     text-decoration: none;

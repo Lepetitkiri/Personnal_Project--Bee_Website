@@ -1,4 +1,5 @@
 import colors from '../../Utils/Colors';
+import border from '../../Utils/Border';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
@@ -14,7 +15,7 @@ const HeaderStyle = styled.header`
     rgb(72, 63, 63, 0.5),
     rgba(00, 00, 00, 0.5)), url('${props => props.basename}/Pictures/Banniere.jpg'); 
   background-size: 100%;
-  border-radius: 20px;
+  ${border};
 
   a {
     text-decoration: none;
